@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00a400">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>KOBSle</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+                <h1>KOBSle</h1>
+            </div>
+            <div class="description">
+                <p>Errate das Wort, welches 3–19 Buchstaben lang ist und mit dir zu tun hat. Die Buchstaben an der richtigen Position werden grün, im Wort vorkommende Buchstaben gelb. Alle anderen grau.</p>
+            </div>
+        </header>
+        <div class="game">
+            <div id="results"></div>
+            <a id="shareButton" href="#" class="hidden">Teile deinen Erfolg!</a>
+        </div>
+        <div class="tastatur">
+            <div class="wortContainer">
+                <div id="wort" class="wort"></div>
+            </div>
+            <div class="row">
+                <div class="key key-q">Q</div>
+                <div class="key key-w">W</div>
+                <div class="key key-e">E</div>
+                <div class="key key-r">R</div>
+                <div class="key key-t">T</div>
+                <div class="key key-z">Z</div>
+                <div class="key key-u">U</div>
+                <div class="key key-i">I</div>
+                <div class="key key-o">O</div>
+                <div class="key key-p">P</div>
+            </div>
+            <div class="row">
+                <div class="key key-a">A</div>
+                <div class="key key-s">S</div>
+                <div class="key key-d">D</div>
+                <div class="key key-f">F</div>
+                <div class="key key-g">G</div>
+                <div class="key key-h">H</div>
+                <div class="key key-j">J</div>
+                <div class="key key-k">K</div>
+                <div class="key key-l">L</div>
+            </div>
+            <div class="row">
+                <div class="key key-e">Enter</div>
+                <div class="key key-y">Y</div>
+                <div class="key key-x">X</div>
+                <div class="key key-c">C</div>
+                <div class="key key-v">V</div>
+                <div class="key key-b">B</div>
+                <div class="key key-n">N</div>
+                <div class="key key-m">M</div>
+                <div class="key key-l">Löschen</div>
+            </div>
+        </div>
+    </div>
+
+
+    <dialog id="invalid">
+        Kein zulässiges Wort.<br>
+        <a class="button" href="#">OK</a>
+    </dialog>
+
+    <script async src="./js/confetti.js"></script>
+    <script async src="./js/seedrandom.min.js"></script>
+    <script async src="wortliste.js"></script>
+    <script async src="wortlistealle.js"></script>
+    <script async src="./js/script.js"></script>
+</body>
+</html>

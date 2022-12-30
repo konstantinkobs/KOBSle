@@ -1,0 +1,185 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    font-size: 1.3rem;
+
+    background: url(images/pattern.png) repeat;
+}
+
+header {
+    font-size: 1rem;
+    flex-grow: 0;
+
+    display: flex;
+    gap: 10px;
+}
+
+.logo {
+    flex-grow: 1;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    text-align: center;
+
+    background: #00a400;
+    color: white;
+}
+
+.description {
+    flex-grow: 2;
+    padding: 15px;
+    color: #aaa;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.wortContainer {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+#wort:empty:before {
+    content: "Dein Wort";
+    display: inline-block;
+    color: #ccc;
+    padding: 3px 5px;
+}
+
+.game {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#results {
+    padding: 10px;
+    overflow-y: scroll;
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.result {
+    margin-bottom: 5px;
+}
+
+.wort {
+    text-transform: uppercase;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.laenge {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tastatur {
+    align-self: bottom;
+    margin-top: 10px;
+    flex-grow: 0;
+}
+
+.row {
+    /* text-align: center; */
+    display: flex;
+    gap: 5px;
+}
+
+.row .key {
+    font-family: 'Roboto Mono', monospace;
+    display: inline-block;
+    background: #eee;
+    padding: 2px;
+    margin: 2px 0px;
+    border-radius: 5px;
+    text-align: center;
+    flex-grow: 1;
+
+    cursor: pointer;
+}
+
+.letter {
+    display: inline-block;
+    padding: 3px 5px;
+}
+
+#invalid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    background: #eee;
+    color: black;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.correct {
+    background: #00a400 !important;
+    color: white;
+}
+
+.almost {
+    background: #ffaa0d !important;
+    color: white;
+}
+
+.wrong {
+    background: #6d6d6d !important;
+    color: white;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#shareButton {
+    display: block;
+    background: black;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+
+    padding: 10px 20px;
+}
