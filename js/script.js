@@ -127,7 +127,7 @@ shareButton.addEventListener("click", function (e) {
 
     const numTries = document.querySelectorAll(".result").length;
     navigator.share({
-        title: 'KOBSle',
-        text: `Ich habe das KOBSle vom ${new Date().toLocaleDateString()} in ${numTries} Versuchen geschafft!`
-    });
+		title: 'KOBSle',
+		text: `Ich habe das KOBSle vom ${new Date().toLocaleDateString('de-DE')} in ${numTries} Versuchen geschafft!`,
+	});
 });
