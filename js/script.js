@@ -1,6 +1,14 @@
 // Initialize random seed
 let today = new Date();
 today = today.toISOString().split('T')[0];
+
+// When the day changes, a new KOBSle starts and the game should reset
+if (localStorage.getItem("date") !== today) {
+    localStorage.setItem("date", today);
+    window.location.reload();
+}
+
+// Fix seed to have a determistic word choice for each day
 Math.seedrandom(today);
 
 const inputBox = document.querySelector("#wort");
